@@ -1,0 +1,42 @@
+<% layout("/layouts/boilerplate") %>
+<body class="all-listings-parent">
+  <!-- <h3 class="all-listings-heading">All Listings</h3> -->
+  <!-- <form method="get" action="/listings/new">
+    <button type="submit">Create Listing</button>
+  </form> -->
+  <div class="header-part">  
+    <div class="form-check form-switch form-check-reverse">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+      <label class="form-check-label" for="flexSwitchCheckReverse">Show total price</label>
+    </div>
+  </div>
+  <div class=" all-listings mt-3">
+  <% for(let listing of allListing) {%>
+    <a class="listings-parent " href="/listings/<%= listing._id %>">
+      <div class="card listings-card" style="width: 18rem;">
+        <img src="<%= listing.image.url %>"" class="card-img-top listings-img" alt="Image">
+        <div class="card-body">
+          <p class="card-text"> <div class="title"><%= listing.title %></div>
+          <span>Price:</span> <i class="fa-solid fa-indian-rupee-sign"></i> <%= listing.price.toLocaleString("en-IN")%>/per night <i class="tax-info">&nbsp; +18% GST</i><br>
+          </p>
+        </div>
+      </div>
+    </a>
+  <% } %>
+</div>
+<script>
+  let showTotalPrice = document.querySelector('#flexSwitchCheckReverse');
+  showTotalPrice.addEventListener("click",()=>{
+    let taxInfo = document.querySelectorAll('.tax-info');
+    for(info of taxInfo){
+      if(info.style.display!="inline"){
+        info.style.display="inline"
+      }
+      else{
+        info.style.display="none"
+      }
+    }
+  })
+</script>
+</body>
+

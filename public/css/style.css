@@ -1,0 +1,328 @@
+:root{
+  --color:#F02C58;
+}
+nav{
+  display: flex !important;
+  position: sticky !important;
+  z-index: 999 !important;
+  top: 0;
+  background-color: #fff !important;
+  border-bottom: 1px solid gray !important;
+  height: 60px !important;
+  align-items: center !important;
+  justify-content: space-around;
+}
+.menu{
+  display: none;
+}
+.left{
+  display: flex;
+  gap: 2vmax;
+}
+.responsive-logo{
+  display: none;
+}
+nav .left > .items{
+  display: flex;
+  gap: 1vmax;
+}
+.nav-link:hover{
+  color: var(--color);
+}
+.search-parent{
+  width: 20vmax;
+  border: 1px solid;
+}
+.search > input{
+  width: 85%;
+}
+/* comment */
+
+form {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.pseudo-search {
+  display: inline;
+  border: 2px solid #ccc;
+  border-radius: 100px;
+  padding: 10px 15px;
+  transition: background-color 0.5 ease-in-out;
+  }
+  input {
+    border: 0;
+    background-color: transparent;
+    width: 200px;
+
+    &:focus {
+      /* Unsure how to fix this... */
+      outline: none;
+    }
+  }
+  
+  button, i {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  select {
+    border: none;
+  }
+
+/* comment */
+.search-btn > i{
+  color: white;
+}
+.search-btn{
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color);
+}
+
+.res-nav{
+  display: none;
+  position: fixed;
+  right: 0;
+  z-index: 999;
+  width: 30vmax;
+  height: 250px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border:1px solid black;
+  border-radius: 0px 0px 15px 15px;
+  gap: 0;
+}
+.res-items{
+  display: flex;
+  flex-direction: column;
+}
+.res-link{
+  text-align: center;
+  color: black;
+  display: block !important;
+  text-decoration: none;
+}
+.res-btns-parent{
+  display: flex;
+  flex-direction: column;
+}
+
+.all-listings-heading{
+  margin: 15px 0;
+}
+.f-info{
+  display: flex;
+  gap: 10px;
+}
+.f-info > a >i{
+  color: #121212;
+  font-size: 20px;
+}
+.f-info-links >a{
+  text-decoration: none;
+  color: #121212;
+}
+.f-info-links >a:hover{
+  text-decoration: underline;
+}
+footer{
+  padding: 20px 0;
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.listings-parent{
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.card-text{
+  padding: 0 !important;
+  margin: 0px !important;
+}
+.card-text span{
+  font-weight: 600;
+}
+.fa-indian-rupee-sign{
+  font-size: 16px !important;
+}
+.card-img-top{
+  height: 20rem;
+  object-fit: cover;
+}
+.listings-card{
+  border: none !important;
+  border-radius: 1rem !important;
+}
+.listings-card:hover{
+  opacity: 0.8;
+}
+.listings-img{
+  border-radius: 1rem !important;
+}
+.card-body{
+  margin: 0 !important;
+  padding: 5px 0 !important;
+}
+.new-listing-heading{
+  margin-top: 15px !important;
+}
+.add-form input{
+  width: 100%;
+  border: 2px solid gray;
+  border-radius: 3px;
+  padding-left: 5px;
+  height: 35px;
+}
+.add-form input:focus , .add-form textarea:focus{
+  outline: 1px solid rgb(56, 135, 183);
+  border: 1px solid rgb(56, 135, 183);
+  box-shadow: 1px 1px 7px rgb(56, 135, 183);
+}
+#listingImage , #updateImage{
+  border-radius: 3px;
+  padding: 1px 0px 0px 1px !important;
+}
+.add-form textarea{
+  width: 100%;
+  height: 100px;
+  border: 2px solid gray;
+  border-radius: 3px;
+  padding-left: 5px;
+}
+.add-btn{
+  text-align: center;
+  width: 100px;
+  height: 45px;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 3px;
+  background-color: var(--color);
+  margin: 10px 0;
+}
+.add-btn:hover{
+  border: 2px solid black;
+  background-color: var(--color);
+  opacity: 0.9 !important;
+  color: white;
+}
+.add-form{
+  margin: 10px 0;
+}
+
+.Edit-card{
+  width: 100%;
+  margin: 10px 0px !important;
+}
+.Edit-card > .card-body{
+  padding: 15px 0px 15px 10px !important;
+}
+.Edit-card .card-img-top{
+  object-fit: cover !important;
+}
+.Edit-card .btns-parent{
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+.edit-btn{
+  background-color: var(--color);
+  color: white;
+}
+.edit-btn:hover{
+  background-color: var(--color);
+  color: white;
+}
+#originalImageParent{
+  display: block !important;
+}
+.sign-in-btn{
+  background-color: var(--color) !important;
+  color: white !important;
+}
+.signup-btn{
+  box-shadow: 1px 1px 2px gray;
+}
+.signup-btn:hover{
+  color: black;
+}
+.login-btn{
+  background-color: var(--color);
+  color: white;
+}
+.btns-parent{
+  display: flex;
+  gap: 15px;
+}
+.login-btn:hover{
+  background-color: var(--color);
+  box-shadow: 1px 1px 2px gray;
+  color: white;
+}
+.container-fluid{
+  width: 100vw !important;
+  display: flex !important;
+  justify-content: space-around !important;
+}
+.res-nav.active{
+  transform: translateX(0%);
+  transition: .5s ease-in-out;
+}
+.header-part{
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.tax-info{
+  display: none;
+}
+.gstShow{
+  display: flex;
+}
+.form-check-reverse{
+  text-align: center;
+  align-content: center;
+  margin-right: 3rem;
+}
+.all-listings{
+  margin: 2px auto;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 25px;
+}
+@media (max-width:764px) {
+  .menu{
+    display: block;
+  }
+  .btns-parent{
+    display: none;
+  }
+  nav .left > .items{
+    display: none;
+  }
+  .logo{
+    display: none;
+  }
+  .responsive-logo{
+    display: block;
+  }
+  .res-nav{
+    display: flex;
+    transform:translateX(100%);
+    transition: .5s ease-in-out;
+    background-color: white;
+  }
+  
+}

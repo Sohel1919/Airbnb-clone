@@ -1,0 +1,60 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+  <div class="col-8 offset-2">
+    <h2 class="new-listing-heading">Create New Listing</h2>
+<form class="row g-2 add-form" method="post" action="/listings" enctype="multipart/form-data">
+  <div class="mb-1">
+    <label class="form-label">Enter title</label>
+    <input 
+    type="text" 
+    name="listing[title]" 
+    placeholder="Enter title"
+    required
+    >
+  </div>
+  <div class="mb-1">
+    <label for="listingImage" class="form-label" >Upload Listing Image</label>
+    <input type="file"
+     name="listing[image]"
+     id="listingImage"
+     required
+    >
+  </div>
+  <div class="mb-1">
+    <label for="inputAddress" class="form-label">Description</label>
+    <textarea 
+    name="listing[description]"
+    id="description" 
+    placeholder="Enter description">
+  </textarea>
+  </div>
+  <div class="col-md-4 mb-2">
+    <label for="inputAddress2" class="form-label">Enter price</label>
+    <input type="text" name="listing[price]" placeholder="Enter price">
+  </div>
+  <div class="col-md-4 mb-2">
+    <label for="inputCity" class="form-label">Enter location</label>
+    <input 
+    type="text"
+    name="listing[location]" 
+    placeholder="Enter location"
+    required
+    >
+  </div>
+  <div class="col-md-4 mb-2">
+    <label for="inputZip" class="form-label">Enter country</label>
+    <input 
+    type="text" 
+    name="listing[country]" 
+    placeholder="Enter country"
+    required
+    >
+  </div>
+  <div class="mb-2">
+    <button type="submit" class="btn add-btn"> Add </button>
+  </div>
+</form>
+  </div>
+</div>
+
+</body>
