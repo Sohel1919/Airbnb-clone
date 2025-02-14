@@ -75,7 +75,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.get("/",(req,res)=>{
-  res.send("Hi i am root")
+  res.render("listing/index.ejs");
 })
 //Check Server setup is working..
 app.listen(port,()=>{
