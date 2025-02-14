@@ -75,7 +75,8 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.get("/",(req,res)=>{
-  res.render("listing/index.ejs");
+  const allListing = await Listing.find({});
+  res.render("listing/index.ejs", { allListing });
 })
 //Check Server setup is working..
 app.listen(port,()=>{
